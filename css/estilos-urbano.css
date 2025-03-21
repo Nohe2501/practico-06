@@ -1,0 +1,128 @@
+/* General */
+body {
+    font-family: 'Courier New', monospace;
+    background-size: cover;
+    background-position: center;
+    animation: background-carousel 25s infinite;
+    color: #e3e3e3;
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 3px #000;
+}
+
+@keyframes background-carousel {
+    0% { background-image: url('../imagenes/imagen1.jpg'); }
+    33% { background-image: url('../imagenes/imagen2.jpg'); }
+    66% { background-image: url('../imagenes/imagen3.jpg'); }
+    100% { background-image: url('../imagenes/iamgen4.jpg'); }
+}
+
+/* Encabezado */
+h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #00ffcc; /* Fluorescente verde-azulado */
+    margin: 40px 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 15px #00ffcc, 0 0 20px #00ffaa;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 3px 3px 15px rgba(0, 255, 204, 0.8); }
+    100% { text-shadow: 5px 5px 25px rgba(0, 255, 204, 1); }
+}
+
+/* Fieldsets */
+fieldset {
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px auto;
+    width: 80%;
+    background: rgba(28, 28, 28, 0.8);
+    box-shadow: 0 0 15px #ff33cc, 0 0 30px #ff66ff;
+}
+
+/* Títulos de fieldsets */
+legend {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ff33cc; /* Fluorescente rosa */
+    background: linear-gradient(135deg, #222, #444);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-shadow: 0 0 15px #ff33cc, 0 0 30px #ff66ff;
+    box-shadow: 0 10px 20px #ff33cc;
+}
+
+/* Inputs y Select */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #ff33cc;
+    border-radius: 5px;
+    background: #111;
+    color: #fff;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease;
+    box-shadow: inset 0 0 10px #00ffcc;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-bottom-color: #00ffcc;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffaa;
+}
+
+/* Botones */
+.botones button {
+    padding: 15px 30px;
+    margin: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #00ffcc, #ff33cc);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 15px #00ffcc, 0 0 30px #ff33cc;
+}
+
+.botones button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px #ff66ff, 0 0 40px #00ffaa;
+}
+
+/* Checkbox y Radio Buttons */
+input[type="checkbox"], input[type="radio"] {
+    accent-color: #00ffcc;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* Condiciones */
+.condiciones {
+    text-align: center;
+    font-size: 1.2em;
+    color: #e3e3e3;
+    text-shadow: 0 0 10px #00ffaa;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+fieldset, h2, .botones button {
+    animation: fadeIn 1s ease-in-out;
+}

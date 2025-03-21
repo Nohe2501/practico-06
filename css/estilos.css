@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: white;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    padding: 15px 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 28px;
+    font-weight: bold;
+    position: relative; /* Necesario para las líneas decorativas */
+    margin: 0; /* Sin márgenes adicionales */
+}
+h2::before,
+h2::after {
+    content: ''; /* Crea las líneas decorativas */
+    display: block;
+    width: 63%; 
+    height: 15px; 
+    background-color: #4D6D63; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h2::before {
+    top: -5px; /* Coloca la línea superior */
+}
+
+h2::after {
+    bottom: -5px; /* Coloca la línea inferior */
+}
+
+fieldset {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #D6E2DE;
+    border: 2px solid #5F8176;
+    padding: 20px;
+    color: black;
+    border-radius: 10px;
+    text-align: center; /*deja en el centro todos los elementos del fieldset*/
+}
+fieldset:focus-within {
+    background-color: #A6BDB8;
+    border-color: #3C504B; 
+    box-shadow: 0 0 10px #3C504B; 
+}
+
+
+legend {
+    background-color: #4D6D63;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: left;  /*Mantiene a la izquierda este elemento*/
+}
+
+label {
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    color: #000;
+}
+
+input[type="text"], input[type="email"],  textarea {
+    width: 76%; 
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #2c3e3e;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: black;
+    text-align: right;  /*Mantiene a la izquierda este elemento*/
+}
+input[type="text"]:focus {
+    border:2px solid black; 
+    background-color: #4F6963; 
+    box-shadow: 0 0 0 1px white; /* con esto podemos agregar una linea blanca adicional */
+    outline: none; /* Elimina el contorno predeterminado */
+}
+input[type="email"]:focus {
+    border:2px solid black; 
+    background-color: #4F6963; 
+    box-shadow: 0 0 0 1px white; /* con esto podemos agregar una linea blanca adicional */
+    outline: none; /* Elimina el contorno predeterminado */
+}
+
+textarea:focus {
+    border:2px solid black; 
+    background-color: #4F6963; 
+    box-shadow: 0 0 0 1px white; 
+    outline: none;
+}
+
+
+
+select {
+    text-align: center;
+    width: 78%; 
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #2c3e3e;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+.radio-group {
+    margin-top: 10px;
+    color: black;
+}
+
+.radio-group input {
+    margin-right: 10px;
+    color: black;
+}
+
+.puntos {
+    display: flex;
+    justify-content: center; 
+}
+
+
+.puntos::before {
+    content: '•••••••••••';
+    font-size: 48px; 
+    letter-spacing: 10px; /* Espaciado entre los puntos */
+    color: #A6C1B9; 
+}
+
+.fieldsetactividades {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #D6E2DE;
+    border: 2px solid #5F8176;
+    padding: 20px;
+    color: black;
+    border-radius: 10px;
+    text-align: left; /*deja en el centro todos los elementos del fieldset*/
+}
+
+
+.condiciones{
+    width: 63%;
+    margin: 50px auto;
+}
+
+.botones{
+    margin: 50px auto;
+    text-align: center;
+}
+
+.botones button {
+    background-color: #2e3b32; 
+    color: #95C4B5; 
+    border: 1px solid #95C4B5;
+    padding: 10px 20px; 
+    margin: 0 10px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    border-radius: 5px; 
+}
